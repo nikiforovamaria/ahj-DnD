@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  font-family: 'open sans';
+}
+
+.container {
+  position: relative;
+  display: grid;
+  width: 800px;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: rgb(130, 38, 235);
+  border-radius: 10px;
+}
+
+.column {
+  height: fit-content;
+  background-color: rgb(230, 226, 231);
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.column__title {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.column__text {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.column__options {
+  font-weight: bold;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+.item {
+  height: fit-content;
+  background-color: rgb(255, 255, 255);
+  margin: 10px;
+  padding: 5px;
+  border-radius: 3px;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+  
+.item:hover {
+  background-color: rgba(255, 255, 255, 0.74);
+}
+
+.item__title {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item__delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(180, 167, 178);
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.column__footer {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: grey;
+  cursor: pointer;
+}
+
+.add-task {
+  margin: 10px;
+}
+
+.add-task__text {
+  width: 100%;
+  min-height: 50px;
+  border: none;
+  border-radius: 3px;
+  resize: none;
+}
+
+.add-task__controls {
+  display: flex;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.add-task__btn {
+  background-color: rgb(69, 223, 55);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.add-task__btn:hover {
+  background-color: rgb(95, 230, 95);
+}
+
+.add-task__cancel {
+  margin-left: 10px;
+  font-size: 30px;
+  align-self: center;
+  cursor: pointer;
+}
+
+.add-task__cancel:hover {
+  font-weight: bold;
+}
+
+.dragged {
+  border-radius: 5px;
+  z-index: 999;
+  pointer-events: none;
+  background-color: #fff;
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
